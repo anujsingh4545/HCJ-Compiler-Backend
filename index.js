@@ -20,6 +20,10 @@ app.use((error, req, res, next) => {
 
 DbConnect();
 
+app.get("/", (req, res) => {
+  res.json("Hello");
+});
+
 app.use("/user", UserRoute);
 app.use("/compiler", CompilerRoute);
 
